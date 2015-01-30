@@ -1,0 +1,185 @@
+
+#global{
+  visibility:hidden;
+  margin:0px;
+  padding:0px;
+}
+
+#mapfile{
+}
+
+
+.mapfile_object
+{
+	background-color:#DFDFDF;
+	left:20px;
+  margin:2px;
+  padding:0px;
+  margin-right:0px;
+  color:black;
+}
+.mapfile_objectover
+{
+  background-image: url(../images/geomatika/fond_param.png);
+	background-repeat:repeat-x;
+	left:20px;
+  margin:2px;
+  padding:0px;
+  margin-right:0px;
+}
+.mapfile_object_attr {
+  background-color:rgb(232,232,232);
+  padding:10px;
+  margin:0px;
+  border:1px solid #007BC4;
+}
+
+.mapfile_object a, .mapfile_object a:active .mapfile_object a:visited{
+	font-size:11;
+	display:block;
+	margin:1;
+	padding:1;
+	color:black;
+}
+
+.mapfile_objectover a, .mapfile_objectover a:active .mapfile_objectover a:visited{
+	font-size:11;
+	display:block;
+	margin:1;
+	padding:1;
+	color:white;
+}
+
+/* Layer */
+.layer{
+  display:block;
+	background-image: url(../images/geomatika/fond_bandeau1.png);
+  margin:0px;
+  padding:0px;
+  color:white;
+
+}
+.layerover{
+  display:block;
+  background-image: url(../images/geomatika/fond_param.png);
+  margin:0px;
+  padding:0px;
+  color:white;
+
+}
+
+.layer table tr td a,layer table tr td a:hover,layer table tr td a:visited,.layer table  tr td a:active{
+  display:block; 
+  color:black;
+  text-decoration:none;
+}
+
+.layerover table tr td a,layerover table tr td a:hover,layerover table tr td a:visited,.layerover table  tr td a:active{
+  display:block;
+  color:white;
+  text-decoration:none;
+}
+
+.layer_attr {
+  background-color:#E7E7E7;
+  padding:0px;
+  margin:0px;
+  border:0px solid #007BC4;
+  border-top:0px;
+}
+
+.data_label{
+  font-size:11;
+  font-weight:none;
+}
+
+/* Layer_classe */
+
+.layer_classe{
+  
+  display:block;
+  margin:1 1 1 15;
+  padding:0px;
+  background-color:rgb(202,220,235);
+  color:white;
+}
+
+.layer_classe_over{
+  display:block;
+  background-image: url(../images/geomatika/fond_param.png);
+  margin:1 1 1 15;
+  padding:0px;
+  color:white;
+}
+
+.layer_classe table tr td a,layer_classe table tr td a:hover,layer_classe table tr td a:visited,.layer_classe table  tr td a:active{
+  display:block;
+  color:black;
+  text-decoration:none;
+   font-size:11px;
+}
+
+.layer_classe_over table tr td a,layer_classe_over table tr td a:hover,layer_classe_over table tr td a:visited,.layer_classe_over table  tr td a:active{
+  display:block;
+  color:white;
+  text-decoration:none;
+  font-size:11px;
+}
+
+.layer_classe_attr{
+  padding:10px;
+  margin:2px;
+  margin-left:15px;
+  margin-top:0px;
+  border:0px solid #007BC4;
+  background-color:rgb(240,240,240);
+  font-size:11;
+
+}
+
+
+
+
+/*Layer_classe_style */
+
+.layer_classe_style{
+  display:block;
+  margin:2 2 2 30;
+  padding:0px;
+  background-color:rgb(202,220,235);
+  color:white;
+   width:95%;
+}
+
+.layer_classe_style_over{
+  display:block;
+  background-image: url(../images/geomatika/fond_param.png);
+  margin:2 2 2 30;
+  padding:0px;
+  color:white;
+   width:95%;
+}
+
+.layer_classe_style table tr td a,layer_classe_style table tr td a:hover,layer_classe_style table tr td a:visited,.layer_classe_style table  tr td a:active{
+  display:block;
+  color:black;
+  text-decoration:none;
+   font-size:11px;
+}
+
+.layer_classe_style_over table tr td a,layer_classe_style_over table tr td a:hover,layer_classe_style_over table tr td a:visited,.layer_classe_style_over table  tr td a:active{
+  display:block;
+  color:white;
+  text-decoration:none;
+  font-size:11px;
+}
+.layer_classe_style_attr{
+  display:block;
+  margin:2 2 2 30;
+  padding:0px;
+  background-color:rgb(255,255,255);
+  color:white;
+   width:95%;
+}
+/* label */
+

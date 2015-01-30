@@ -1,0 +1,11 @@
+div#headermf{width:700px;overflow:hidden;background:#fff;border:0}
+div#headermf h1,div#onglets{width:700px;margin:0;padding-bottom:0px;text-align:left;border:0;}
+
+ul#navmf,ul#navmf li{list-style-type:none;margin:0px;padding:0px;}
+ul#navmf{float:left;font-size: 80%;}
+ul#navmf li{float:left;margin-right: 3px;text-align: center;border:0px}
+ul#navmf a{float:left;width: 180px;padding: 7px 0;background: #6BCAF8;text-decoration:none;color: #FFC}
+ul#navmf a:hover{background: #6BCAF8;color: #f00;}
+ul#navmf li.activelink a,ul#navmf li.activelink a:hover{background-image: url(../images/geomatika/fond_param.png);background-repeat:repeat-x;background-color:#E6E6E6;color: #FFF;border:0}
+
+div#ficheonglet{width:100%;text-align:left;background-color:#0F9CE2;border:0px;margin:0px;padding:1px;}

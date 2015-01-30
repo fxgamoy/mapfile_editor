@@ -1,0 +1,179 @@
+/* Bandeau */
+.fondbody{background: #828282;}
+.logo_domain{background-image: url(../images/default/geomatika.gif);background-repeat:no-repeat;  margin:0px;padding:0px;}
+div.bandeau{background: #656565;}
+div.bandeau{background: -moz-linear-gradient(top, #656565 0%, #808080 100%);}
+div.bandeau{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#656565), color-stop(100%,#808080)); }
+div.bandeau{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#656565', endColorstr='#808080',GradientType=0 ); }
+.corpsbandeau{font-size:10px;color : #FFF;}
+
+ /*Menu carto*/
+.lm_top.fondmenu{background:none;background-color:#DCDCDC;}
+#barreboutonV{background-color:#DCDCDC;}
+
+ /*Menu */
+.fondmenu{background: #F4F4F4; }/* old browsers */
+.fondmenu{background: -moz-linear-gradient(top, #F4F4F4 0%, #dbdbdb 100%);} /* firefox */
+.fondmenu{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F4F4), color-stop(100%,#dbdbdb)); }/* webkit */
+.fondmenu{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F4F4', endColorstr='#dbdbdb',GradientType=0 ); }/* ie */
+
+.ficheonglet{background: #FFF; }/* old browsers */
+.ficheonglet{background: -moz-linear-gradient(top, #dbdbdb 0%, #FFF 20%);} /* firefox */
+.ficheonglet{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(20%,#fff)); }
+.ficheonglet{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#FFFFFF',GradientType=0 ); }
+
+
+.fichemain{	background: #0197EB !important;color:white !important; font-size:12px;}
+.fichemain{	background: -moz-linear-gradient(center top , #0197EB 0%, #0082CD 100%) repeat scroll 0 0 transparent; }
+.fichemain{	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0197EB), color-stop(100%,#0082CD));}
+.fichemain{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0197EB', endColorstr='#0082CD',GradientType=0 );}
+ 
+.fichemain1{background: #78922F !important;color:white !important;font-size:12px;}
+.fichemain1{background: -moz-linear-gradient(center top , #78922F 0%, #8DBA0F 100%) repeat scroll 0 0 transparent; }
+.fichemain1{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#78922F), color-stop(100%,#8DBA0F));}
+.fichemain1{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78922F', endColorstr='#8DBA0F',GradientType=0 );}
+
+
+.fichetitre{background: #5BB8EA !important;border: 0px solid white;padding:5px 0px;color : white !important;font-weight:bold;font-size : 11px;}
+.fichetitre1{background: #bde87d !important;padding:5px 0px;color : #5D723D !important;font-weight:bold;font-size : 11px;}
+.fichetitre2{background: #A4A4A4 !important;padding:5px 0px;color : #471600 !important;font-size : 11px;}
+
+div#headerfmw{overflow:hidden;background:#7B7B7B;margin-left: 1%;position:absolute;right:3px;bottom:0px;}
+
+.fdOnglet{background: #78922F;}   /*old browsers */
+.fdOnglet{background: -moz-linear-gradient(top, #95CA02 0%,  #78922F 41%, #78922F 100%);} /* firefox */
+.fdOnglet{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#78922F), color-stop(41%, #78922F), color-stop(100%,#95CA02));} /* webkit */
+.fdOnglet{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95CA02', endColorstr='#78922F',GradientType=0 );}
+
+.tderror{background-color : #E2F1FF;color:#000000;font-size : 10px;}
+
+ul#nav a{background: #78922F;}
+ul#nav  a{background: -moz-linear-gradient(top, #95CA02 0%,  #78922F 41%, #78922F 100%);}
+ul#nav  a{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#78922F), color-stop(41%, #78922F), color-stop(100%,#95CA02));} /* webkit */
+ul#nav  a{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95CA02', endColorstr='#78922F',GradientType=0 );}
+/* Onglet alertes*/
+ul#nav #ALERT_tab a{background: #994A1E;}
+ul#nav #ALERT_tab a{background: -moz-linear-gradient(top, #994A1E 0%,  #CA531F 41%, #E8967C 100%);}
+ul#nav #ALERT_tab a{background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#994A1E), color-stop(41%, #CA531F), color-stop(100%,#E8967C));}
+ul#nav #ALERT_tab a{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#994A1E', endColorstr='#E8967C',GradientType=0 );}
+
+/*Gestion du curseur sur la map*/
+div#viewer.cursor_move{cursor:move;}
+div#viewer.cursor_help{cursor:help;}
+div#viewer.cursor_cross_help_rect{cursor:url(../images/cursor/cross_help.png) 12 14, crosshair;}
+div#viewer.cursor_cross_help{cursor:url(../images/cursor/cross_help.png) 12 12, crosshair;}
+div#viewer.cursor_cross_zoom{cursor:url(../images/cursor/cross_zoom.png) 13 15, crosshair;}
+div#viewer.cursor_imajing{cursor:url(../images/cursor/cursor_imajing.png) 13 15, crosshair;}
+div#viewer.cursor_pointer{cursor:pointer;}
+div#viewer.cursor_crosshair{cursor:crosshair;}
+div#viewer.cursor_zoom_out{cursor:pointer;}
+div#viewer.cursor_zoom_out{cursor:-moz-zoom-out;}
+
+table#menuCouches td{padding:8px;}
+table#menuCouches th{padding:8px;}
+
+div.olLayerGooglePoweredBy{display:none;}
+
+.datalist{bottom:50px; right:50px; height:128px; width:128px; background-image: url(../images/kexi.png);background-repeat:no-repeat; background-position:right bottom;}
+
+.tip_aide_content{
+	background-color:#ffffff;
+	opacity : 0.7;
+	-moz-opacity : 0.7;
+	-ms-filter: "alpha(opacity=70)"; /* IE 8 */
+	filter : alpha(opacity=70); /* IE < 8 */
+	margin:5px 0px;
+}
+.ui-widget-header{
+font-weight:normal;
+}
+
+.add-padding	{ padding:5px !important; }
+div.fd_imajing{background: #656565;}
+
+/*Observatoire*/
+div#dialogObservatoire .ui-accordion-header-active{font-weight: bold;} 
+div#accordion_obs .header_groupe_table{  
+	  line-height: 16px;  
+    display: block;  
+    font-size: 11pt;
+		background: #00B7EA;
+		background: -moz-linear-gradient(center top , #00B7EA 0%, #009EC3 100%) repeat scroll 0 0 transparent;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00B7EA), color-stop(100%,#009EC3));
+		color: white;
+}
+div#accordion_obs .ui-widget-content.content_groupe_table{  
+	background:#AAAAAA;
+} 
+
+div#accordion_obs .header_table{ 
+	line-height: 16px;  
+	display: block;  
+	font-size: 10pt; 
+	/*background: #C0C0C0;*/
+	color: white;
+} 
+
+
+
+
+div#dialogObservatoire  .ui-selecting { background: #FECA40; }
+div#dialogObservatoire  .ui-selected { background: #F39814; color: white; }
+div#dialogObservatoire  .selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+div#dialogObservatoire  li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+.button_ind_obs{
+    width: 20px;
+    height: 20px;
+}
+.saveTabInd{
+    width: 20px;
+    height: 20px;
+}
+.titreAccordion{
+	background: #00B7EA;
+	background: -moz-linear-gradient(center top , #00B7EA 0%, #009EC3 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00B7EA), color-stop(100%,#009EC3));
+}
+
+.ui-icon.lightgrey { background-image: url(../extras/jquery_ui/1.10.4/css/smoothness/images/ui-icons_888888_256x240.png); }
+.ui-icon.black { background-image: url(../extras/jquery_ui/1.10.4/css/smoothness/images/ui-icons_222222_256x240.png); }
+
+
+.menu_saveTabInd{ position: absolute; width: 100px; }
+
+.btnNewIndTable{ margin: 7px; }
+.btnNewIndField{ margin: 7px; }
+
+img.olTileImage {
+    -webkit-transform: inherit;
+    -moz-transform: inherit;
+    -o-transform: inherit;
+    -ms-transform: inherit;
+    transform: inherit;
+    -webkit-backface-visibility: inherit;
+    -moz-backface-visibility: inherit;
+    -ms-backface-visibility: inherit;
+    backface-visibility: inherit;
+    -webkit-perspective: inherit;
+    -moz-perspective: inherit;
+    -ms-perspective: inherit;
+    perspective: inherit;
+}
+
+.ui-colorpicker-dialog {
+	font-size:	12px !important;
+}
+.ui-colorpicker-swatches {
+	height:	128px !important;
+}
+
+.alertify-logs {
+	bottom: 100px;
+	right: 50px;
+}
+/* Gestion du menu shortcut */
+.isigeo-accordion-shortcut{	text-align:center; margin-bottom:1em; }
+.isigeo-shortcut-requeteur{ border-top:1px solid #C0C0C0; height:19px; cursor:pointer !important; font-size:.6em; }
+.isigeo-shortcut-requeteur:hover{ background:#FF8401; }
+.isigeo-shortcut-requeteur-value{ font-weight:bold !important; float:right; margin-right:4px; font-size:1.3em; }
