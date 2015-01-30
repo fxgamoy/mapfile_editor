@@ -1,0 +1,85 @@
+<?php
+/*  Copyright Géomatika, 2002-2007
+ * Contact, infos : fx gamoy, fx.gamoy@geomatika.fr
+ * -----------------------------------------------------------
+ *
+ * ISIgéo version 3.0 "Ajax"
+ * Module IsiGéo Collectivités v 2.0 
+ * This script is developed by geomatika.fr.  Visit us at www.geomatika.fr
+ *
+ */
+session_start();
+$_SESSION["contrib"]="contrib/mapedit";
+
+//$domain="geomatika";
+include_once( "globprefs.php" );
+
+//include( "lib/conneclib.php" );
+//include_once( "lib/libtrace.php" );
+//include_once( "lib/libmenu.php" );
+//include_once( "lib/libdomain.php" );
+
+$http_form_vars = count( $_POST ) > 0 ? $_POST : 
+                                    ( count($_GET) > 0 ? $_GET : array("") );
+
+//print_r($http_form_vars);
+
+if (!$link) {
+  echo "Impossible de se connecter à la base de données.\n";
+  exit;
+}
+
+//if( $_SESSION["appli"]=="")
+//$_SESSION["appli"]=1;
+
+if (isset($http_form_vars["css"])&& $http_form_vars["css"]!="")
+$_SESSION["css"]="css/geomatika/".$http_form_vars["css"].".css";
+if( $_SESSION["css"]=="")
+$_SESSION["css"]="css/geomatika/intranet.css";
+
+//if(isset($http_form_vars["w"]) && $http_form_vars["w"]!="")
+//$_SESSION["w"]=$http_form_vars["w"]-200;
+//if(isset($http_form_vars["h"]) && $http_form_vars["h"]!="")
+//$_SESSION["h"]=$http_form_vars["h"]-55;
+
+//if (!isset($_SESSION["w"]) || $_SESSION["w"]=="")
+//{
+//echo "<script type=\"text/javascript\">logadapt();</script>";
+//}
+
+
+
+?>
+<html>
+<head>
+	<title>Service extranet Géomatika - Identification</title>
+	<link href="<?php echo $_SESSION["css"]?>" rel="stylesheet" type="text/css">
+	<meta name="robots" content="NONE">
+	<meta name="email" content="webmaster@geomatika.fr">
+	<meta name="author" content="GAMOY FX,fx.gamoy@geomatika.fr">
+	<meta name="publisher" content="GEOMATIKA">
+	<meta name="copyright" content="Copyright Géomatika©2002-2007">
+
+<script language="JavaScript" type="text/javascript" src="../../javascript/prototype.js"></script>
+<script language="JavaScript" type="text/javascript" src="javascript/libauth.js"></script>
+
+  <script>
+Event.observe(window, 'load', function() {
+<?php
+//print_r($_GET);
+	if(isset($_GET["utilisateur"]) && $_GET["utilisateur"]!="")
+	{
+	 $content="bureau=ok&utilisateur=".$_GET["utilisateur"] ."&motdepasse=".$_GET["motdepasse"];
+	 echo "sendForm('".$content."');";
+	}
+?>
+
+				});
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
