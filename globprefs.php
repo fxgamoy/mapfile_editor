@@ -7,7 +7,7 @@
  *
  */
 $_SESSION["domain"]="demo";
-define( "APP_PATH", "d:/web/isigeo_mapedit/" );
+define( "APP_PATH", "d:/web/github/mapfile_editor/" );
 define( "TMP_DIR", "d:/mapimage/" );
 define( "REPMAP", "d:/mapserver_data/".$_SESSION["domain"]."/");
 define( "REPDATA", "d:/mapserver_data/".$_SESSION["domain"]."/data/" );
@@ -16,12 +16,15 @@ define( "VIEWER","http://proto3.2.geomatika.fr/contrib/prototype/index.phtml");
 define( "LEVEL","1");
 
 
-$link = pg_connect("host=localhost port=5432 dbname=applisig user=postgres password=jtgacdt");
+//$link = pg_connect("host=localhost port=5432 dbname=applisig user=postgres password=jtgacdt");
 // include the utilties file for misc functions
 //include_once( APP_PATH."wrapper/utilities.php" );
 include_once( APP_PATH."wrapper/map_session.php" );
 //include_once( APP_PATH."wrapper/map_navigator.php" );
 //include_once( APP_PATH."wrapper/map_query.php" );
+include_once( APP_PATH."wrapper/class.JavaScriptPacker.php" );
+include_once( APP_PATH."wrapper/class.compress.php" );
+require(APP_PATH."lib/groupe_def.php");
 
 include_once "wrapper/map_mcd.php";
 $oMapMcd =  new mcd;
@@ -37,4 +40,7 @@ $oMapSession = new MapSession_R;
 // create a new map navigator object
 //$oMapNavigator = new MapNavigator( $oMapSession );
 //$oMapQuery =  new MapQuery( $oMapSession );
+	$oCompress=new compress();
+	$revision=$oCompress->getRevision(); 
+	define("REVISION", $revision); 
 ?>
