@@ -46,18 +46,21 @@ $css=$oUserSession->val["css"];*/
 <meta name="language" content="fr" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="distribution" content="Global" />
-<meta name="email" content="webmaster@geomatika.fr" />
+<meta name="email" content="contact[at]geomatika.fr" />
 <meta name="author" content="fx gamoy" />
+<meta name="entete" content="A definir" />
 
-<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="extras/jquery_ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css">
-<link rel="stylesheet" type="text/css" href="css/completion.css">
+<!--link rel="stylesheet" type="text/css" href="css/completion.css"-->
 <link rel="stylesheet" type="text/css" href="extras/chosen/chosen/chosen-isigeo.min_0.10.css">
 <!--link rel="stylesheet" type="text/css" href="../extras/jquery_autocomplete/1.1.5/styles.css"-->
-<link rel="stylesheet" type="text/css" href="extras/jquery_autocomplete/1.2.11/content/styles.css">
-<link rel="stylesheet" type="text/css" href="extras/jquery_colorpicker/1.0.9/jquery.colorpicker.css">
+<!--link rel="stylesheet" type="text/css" href="extras/jquery_autocomplete/1.2.11/content/styles.css"-->
+<!--link rel="stylesheet" type="text/css" href="extras/jquery_colorpicker/1.0.9/jquery.colorpicker.css"-->
+<link rel="stylesheet" type="text/css" href="extras/jquery_layout/source/stable/layout-default.css">
 <link rel="stylesheet" type="text/css" href="extras/alertify/alertify.core.css">
 <link rel="stylesheet" type="text/css" href="extras/alertify/alertify.default.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <?php
     $oCompress->rootDir="";
     $oCompress->load($isigeo_jq); 
@@ -88,7 +91,7 @@ $css=$oUserSession->val["css"];*/
 <body>
 <div class="ui-layout-center">
     <div id="mapfile_editor">
-    <ul>
+    <ul >
     <li><a href="#mapfile_header">Param&egrave;tres g&eacute;n&eacute;raux</a></li>
     <li><a href="#mapfile_layers">Gestion des couches</a></li>
     </ul>
