@@ -189,7 +189,7 @@
 		 *	@param: callback - { function } - Une fonction à executer a la fermeture
 		 */
 		destroy:function(destroyCallback){
-
+			var isIE = navigator.appVersion.match(/MSIE/) == "MSIE";
 			//Pour ce plaisantin de internet explorer
 			if(isIE){
 

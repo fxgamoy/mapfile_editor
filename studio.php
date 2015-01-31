@@ -71,7 +71,7 @@ $css=$oUserSession->val["css"];*/
 		var contentOptions = {
 			title:'Choix du Mapfile',
 			subTitle:'',
-			html:'Montest'
+			html:'Liste des mapfiles présents dans le rép des datas'
 			//html:result[1]
 		};
 
