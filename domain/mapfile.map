@@ -1,0 +1,506 @@
+MAP
+  NAME "Mapfile"
+  EXTENT 286716.666666667 134800 298983.333333333 142800
+  FONTSET "./etc/fonts.txt"
+  IMAGECOLOR 255 255 255
+  IMAGETYPE png
+  INTERLACE FALSE
+  SYMBOLSET "./etc/symbols.sym"
+  SHAPEPATH "./data"
+  SIZE 460 300
+  STATUS ON
+  UNITS METERS
+  OUTPUTFORMAT
+    NAME "png"
+    MIMETYPE "image/png"
+    DRIVER "GD/PNG"
+    EXTENSION "png"
+    IMAGEMODE "PC256"
+    TRANSPARENT FALSE
+    FORMATOPTION "INTERLACE=OFF"
+  END
+
+  PROJECTION
+    	"init=epsg:27563"
+  END
+
+  SYMBOL
+    NAME "point_situ"
+    TYPE PIXMAP
+    IMAGE "./custsymb/pointsitu2.GIF"
+    TRANSPARENT 0
+  END
+  SYMBOL
+    NAME "lampe"
+    TYPE TRUETYPE
+    FONT "3"
+    CHARACTER "&#179;"
+    ANTIALIAS FALSE
+  END
+  LEGEND
+
+    INTERLACE TRUE
+    KEYSIZE 24 15
+    KEYSPACING 5 5
+    LABEL
+      SIZE MEDIUM
+      TYPE BITMAP
+      BUFFER 0
+      COLOR 75 14 223
+      FORCE FALSE
+      MINDISTANCE -1
+      MINFEATURESIZE -1
+      OFFSET 0 0
+      PARTIALS TRUE
+    END
+    POSITION LL
+    STATUS ON
+    TRANSPARENT FALSE
+    TEMPLATE "d:/web/intranet_geomatika/legend_template.html"
+  END
+
+  QUERYMAP
+    COLOR 255 0 0
+    SIZE -1 -1
+    STATUS ON
+    STYLE HILITE
+  END
+
+  REFERENCE
+    COLOR -1 -1 -1
+    EXTENT 289000 134800 296700 142800
+    IMAGE "./keymap/bayonne.png"
+    OUTLINECOLOR 255 0 0
+    SIZE 141 150
+    STATUS ON
+      MARKER "point_situ"
+      MARKERSIZE 30
+      MINBOXSIZE 5
+      MAXBOXSIZE 150
+  END
+   SCALEBAR
+    BACKGROUNDCOLOR 255 255 255
+    COLOR 220 164 148
+    IMAGECOLOR -1 -1 -1
+    INTERLACE TRUE
+    INTERVALS 3
+    LABEL
+      SIZE TINY
+      TYPE BITMAP
+      BUFFER 0
+      COLOR 255 255 255
+      FORCE FALSE
+      MINDISTANCE -1
+      MINFEATURESIZE -1
+      OFFSET -3 0
+      PARTIALS TRUE
+    END
+    OUTLINECOLOR 255 255 255
+    POSITION UC
+    SIZE 150 3
+    STATUS ON
+    STYLE 0
+    TRANSPARENT TRUE
+    UNITS METERS
+  END
+
+  WEB
+    IMAGEPATH "d:/mapimage/"
+    IMAGEURL "/tmp/"
+    LOG "/tmp/log.txt"
+    MAXSCALE 100000
+      METADATA
+      END
+    MINSCALE 100
+  END
+  LAYER
+    CONNECTION "user=postgres password=jtgacdt dbname=cabab host=localhost"
+    CONNECTIONTYPE POSTGIS
+    DATA "wkb_geometry from (select * from axesvoies where code_insee=64102) AS foo USING UNIQUE ogc_fid"
+    GROUP "Voirie"
+    LABELITEM "information"
+    LABELMAXSCALE 1000
+    LABELMINSCALE 0
+    MAXSCALE 10000
+      METADATA
+      END
+    MINSCALE 0
+    NAME "axesvoies"
+    SIZEUNITS PIXELS
+    STATUS ON
+    TOLERANCE 6
+    TOLERANCEUNITS PIXELS
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "axes"
+      LABEL
+        ANGLE AUTO
+        ANTIALIAS TRUE
+        FONT "arial"
+        MAXSIZE 256
+        MINSIZE 4
+        SIZE 10
+        TYPE TRUETYPE
+        BUFFER 1
+        COLOR 0 0 0
+        FORCE FALSE
+        MINDISTANCE 10
+        MINFEATURESIZE -1
+        OFFSET 0 0
+        OUTLINECOLOR 255 255 255
+        PARTIALS TRUE
+        POSITION CC
+      END
+      METADATA
+      END
+      STYLE
+        ANGLE 360
+        COLOR 220 220 220
+        SIZE 1
+        SYMBOL "pointille"
+      END
+      TITLE "Axes de voies"
+    END
+  END
+
+  LAYER
+    NAME "numerosvoies"
+    CONNECTION "user=postgres password=jtgacdt dbname=cabab host=localhost"
+    CONNECTIONTYPE POSTGIS
+    DATA "wkb_geometry from (select * from numerosvoies where code_insee=64102) AS foo USING UNIQUE ogc_fid"
+    GROUP "Voirie"
+    LABELITEM "affichage"
+    MAXSCALE 1000
+      METADATA
+      END
+    MINSCALE 0
+    SIZEUNITS PIXELS
+    STATUS ON
+    TOLERANCE 3
+    TOLERANCEUNITS PIXELS
+    TYPE ANNOTATION
+    UNITS METERS
+    CLASS
+      NAME "axes"
+      LABEL
+        ANGLE AUTO
+        ANTIALIAS TRUE
+        FONT "arial"
+        MAXSIZE 256
+        MINSIZE 4
+        SIZE 7
+        TYPE TRUETYPE
+        OUTLINECOLOR 255 255 255
+        BUFFER 1
+        COLOR 236 51 55
+        FORCE FALSE
+        MINDISTANCE -1
+        MINFEATURESIZE -1
+        OFFSET 0 0
+        PARTIALS TRUE
+        POSITION AUTO
+      END
+      METADATA
+      END
+    END
+  END
+    LAYER
+    CONNECTION "./data/cabab/Toponyme_voie_5000_bab.TAB"
+    CONNECTIONTYPE OGR
+    GROUP "Voirie"
+    LABELITEM "INFORMATION"
+    MAXSCALE 3000
+      METADATA
+      END
+    MINSCALE 999
+    NAME "NOM VOIE 5000"
+    SIZEUNITS PIXELS
+    STATUS ON
+    TOLERANCE 3
+    TOLERANCEUNITS PIXELS
+    TYPE ANNOTATION
+    UNITS METERS
+    CLASS
+      NAME "axes"
+      LABEL
+        ANGLE AUTO
+        ANTIALIAS TRUE
+        FONT "arial"
+        MAXSIZE 256
+        MINSIZE 4
+        SIZE 9
+        TYPE TRUETYPE
+        BUFFER 1
+        COLOR 0 0 0
+        FORCE FALSE
+        MINDISTANCE -1
+        MINFEATURESIZE -1
+        OFFSET 0 0
+        OUTLINECOLOR 255 255 255
+        PARTIALS TRUE
+        POSITION AUTO
+      END
+      METADATA
+      END
+    END
+  END  LAYER
+    NAME "Giratoires"
+    STATUS ON
+    GROUP "Voirie"
+    TYPE ANNOTATION
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=postgres password=jtgacdt dbname=bay64102 host=localhost"
+    DATA "wkb_geometry from a64102_voi_giratoire USING UNIQUE ogc_fid"
+    SIZEUNITS PIXELS
+    LABELITEM "nom_giratoire"
+    MINSCALE 0
+    MAXSCALE 15000
+    LABELMINSCALE 0
+    LABELMAXSCALE 15000
+    TOLERANCE 15
+    TOLERANCEUNITS PIXELS
+    CLASS
+      NAME "Giratoires"
+      TITLE "Giratoires"
+      LABEL
+        TYPE BITMAP
+        SIZE SMALL
+        POSITION CC
+        OFFSET 0 15 
+        BUFFER 1
+        WRAP "@@"
+        MINDISTANCE -1
+        MINFEATURESIZE -1
+        BACKGROUNDCOLOR 255 255 210
+        BACKGROUNDSHADOWCOLOR 0 0 255
+        COLOR 255 128 0
+	  #OUTLINECOLOR 255 255 255
+        PARTIALS TRUE
+        FORCE TRUE
+      END
+      STYLE
+        SYMBOL "square"
+        SIZE 10
+      END
+    END
+  END
+  
+
+
+  LAYER
+    NAME "cable"
+    STATUS ON
+    GROUP "éclairage public"
+    TYPE LINE
+    METADATA
+    "title" "été"
+    END
+    
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=postgres password=jtgacdt dbname=ep64102 host=localhost"
+    DATA "wkb_geometry from cable USING UNIQUE ogc_fid"
+    SIZEUNITS PIXELS
+    CLASSITEM "nature"
+    MINSCALE 0
+    MAXSCALE 5100
+    TOLERANCE 5
+    TOLERANCEUNITS PIXELS
+    TEMPLATE "consultable"
+    CLASS
+      NAME "reseau"
+      TITLE "Réseau souterrain"
+      EXPRESSION "souterrain"
+      STYLE
+        SYMBOL "pointille2"
+        COLOR 255 128 0
+        SIZE 2
+      END
+    END
+    CLASS
+      NAME "reseau"
+      TITLE "Réseau mixte"
+      EXPRESSION "aero-souterrain"
+      STYLE
+        SYMBOL "pointille"
+        COLOR 255 128 0
+        SIZE 2
+      END
+    END
+    CLASS
+      NAME "reseau"
+      TITLE "Réseau aérien"
+      EXPRESSION "aerien"
+      STYLE
+        SYMBOL "circle"
+        COLOR 255 128 0
+        SIZE 2
+      END
+    END
+    CLASS
+      NAME "Mats"
+      TITLE "Réseau indeterminé"
+      EXPRESSION ""
+      STYLE
+        SYMBOL "circle"
+        COLOR 128 128 128
+        SIZE 2
+      END
+    END
+  END
+ 
+  LAYER
+    NAME "support"
+    STATUS ON
+    GROUP "Eclairage public"
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=postgres password=jtgacdt dbname=ep64102 host=localhost"
+    DATA "wkb_geometry from support USING UNIQUE ogc_fid"
+    SIZEUNITS PIXELS
+  #  CLASSITEM "ref_support"
+    MINSCALE 0
+    MAXSCALE 10000
+    TOLERANCE 15
+    TOLERANCEUNITS PIXELS
+    TEMPLATE "consultable"
+    CLASS
+      NAME "Mats"
+      TITLE "Supports renseignés"
+      STYLE
+        SYMBOL "lampe"
+        COLOR 0 128 0
+        OUTLINECOLOR -1 -1 -1
+        SIZE 12
+      END
+    END
+  END
+  LAYER
+    NAME "Ref support"
+    STATUS OFF
+    GROUP "Eclairage public"
+    TYPE ANNOTATION
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=postgres password=jtgacdt dbname=ep64102 host=localhost"
+    DATA "wkb_geometry from support USING UNIQUE ogc_fid"
+    SIZEUNITS PIXELS
+    LABELITEM "ref_support"
+    MINSCALE 0
+    MAXSCALE 10000
+    LABELMINSCALE 0
+    LABELMAXSCALE 1000
+    TOLERANCE 15
+    TOLERANCEUNITS PIXELS
+    CLASS
+      NAME "ref_support"
+      TITLE "Réf support"
+      LABEL
+        TYPE BITMAP
+        SIZE SMALL
+        POSITION UC
+        OFFSET 0 15 
+        BUFFER 1
+        MINDISTANCE -1
+        MINFEATURESIZE -1
+        BACKGROUNDCOLOR 225 225 255
+        BACKGROUNDSHADOWCOLOR 0 0 255
+        COLOR 0 0 255
+	  #OUTLINECOLOR 255 255 255
+        PARTIALS TRUE
+        FORCE false
+      END
+      STYLE
+        SYMBOL "square"
+        SIZE 10
+      END
+    END
+  END
+ LAYER
+    NAME "ec_poste"
+    STATUS ON
+    GROUP "Eclairage public"
+    TYPE POINT
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "user=postgres password=jtgacdt dbname=ep64102 host=localhost"
+    DATA "geometrie from ec_poste USING UNIQUE ogc_fid"
+    SIZEUNITS PIXELS
+    LABELITEM "nom"
+    MINSCALE 0
+    MAXSCALE 50100
+    TOLERANCE 5
+    TOLERANCEUNITS PIXELS
+    TEMPLATE "consultable"
+    CLASS
+      NAME "Armoires"
+      TITLE "Armoires d'Alimentation"
+      LABEL
+        TYPE BITMAP
+        SIZE SMALL
+        POSITION CC
+        OFFSET 0 15 
+        BUFFER 1
+        MINDISTANCE -1
+        MINFEATURESIZE -1
+        BACKGROUNDCOLOR 225 225 255
+        BACKGROUNDSHADOWCOLOR 0 0 255
+        COLOR 0 0 255
+	  #OUTLINECOLOR 255 255 255
+        PARTIALS TRUE
+        FORCE false
+      END
+      STYLE
+        SYMBOL "armoire"
+        COLOR 255 0 255
+        OUTLINECOLOR 255 0 255
+        WIDTH 2
+        ANGLE [angle]
+        SIZE 12
+        MINSIZE 1
+        MAXSIZE 100
+      END
+      STYLE
+        SYMBOL "cxarmoire"
+        COLOR 255 0 255
+        OUTLINECOLOR 255 0 255
+        WIDTH 1
+        ANGLE [angle]
+        SIZE 12
+        MINSIZE 1
+        MAXSIZE 100
+      END
+    END
+  END
+  LAYER
+    NAME "selection"
+    GROUP "Sélection"
+    STATUS ON
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "selection"
+      TITLE "Sélection"
+      STYLE
+        SYMBOL 0
+        OUTLINECOLOR -1 -1 -1
+        COLOR 255 0 0
+        SIZE 2
+        MINSIZE 1
+        MAXSIZE 100
+      END
+      LABEL
+        TYPE TRUETYPE
+        FONT "arial"
+        SIZE 8
+        POSITION CC
+        OFFSET 0 20 
+        BUFFER 0
+        MINDISTANCE -1
+        MINFEATURESIZE -1
+        COLOR 255 0 200
+        OUTLINECOLOR 255 255 255
+        PARTIALS TRUE
+        FORCE TRUE
+      END
+    END
+  END
+END

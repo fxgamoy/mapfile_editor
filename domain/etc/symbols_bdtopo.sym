@@ -1,0 +1,573 @@
+SYMBOLSET
+Symbol
+  Name 'armoire'
+    Type VECTOR  
+    Filled false  
+    Points  
+    0 0.5 
+    0 0
+    1 0
+    1 0.5
+    0 0.5
+    END
+    END
+Symbol
+  Name 'cxarmoire'
+  Type VECTOR
+  Points
+    0 0  1 0.5
+    -99 -99
+    0 0.5
+    1 0
+  END
+END
+SYMBOL
+NAME "sections"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    10 5 1 5
+  END
+  FILLED TRUE
+END
+ SYMBOL
+  NAME 'hatch-lc'
+  TYPE HATCH
+  END
+SYMBOL
+  NAME "pointille"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    6 3 6 3
+  END
+END
+SYMBOL
+  NAME "linie-gestr1"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    20 10 20 10
+  END
+END
+SYMBOL
+  NAME "linie-gestr2"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    10 10 10 10
+  END
+END
+
+SYMBOL
+  NAME "linie-gestr3"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    10 5 10 5
+  END
+END
+
+SYMBOL
+  NAME "linie-gestr4"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    6 3 6 3
+  END
+END
+
+# gepunktete Linien
+
+SYMBOL
+  NAME "linie-gepunkt1"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    1 10 1 10
+  END
+  FILLED TRUE
+END
+
+SYMBOL
+  NAME "linie-gepunkt2"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    1 20 1 20
+  END
+  FILLED TRUE
+END
+
+SYMBOL
+  NAME "linie-gepunkt3"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    1 41 1 41
+  END
+  FILLED TRUE
+END
+
+# Muster mit Punkten und Linien
+
+SYMBOL # abwechselnd ein Linienstück und ein Punkt
+  NAME "grenze1"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    10 5 1 5
+  END
+  FILLED TRUE
+END
+
+
+
+  
+  Symbol
+  Name 'triangle'
+  Type VECTOR
+  Filled TRUE
+  Points
+  0 1
+  .5 0
+  1 1
+  0 1
+  END
+  END 
+  
+  Symbol
+  Name 'square'
+  Type VECTOR
+  Filled TRUE
+  Points
+  0 1
+  0 0
+  1 0
+  1 1
+  0 1
+  END
+  END 
+  
+  Symbol
+  Name 'plus'
+  Type VECTOR
+  Points
+  .5 0
+  .5 1
+  -99 -99
+  0 .5
+  1 .5
+  END
+  END 
+  
+  Symbol
+  Name 'cim'
+  Type VECTOR
+  Points
+  .5 0.25
+  .5 0.75
+  -99 -99
+  0.25 .4
+  0.75 .4
+  END
+  END 
+  
+  Symbol
+  Name 'cross'
+  Type VECTOR
+  Points
+  0 0
+  1 1
+  -99 -99
+  0 1
+  1 0
+  END
+  END
+  
+  Symbol
+  Name 'circle'
+  Type ELLIPSE
+  Filled TRUE
+  Points
+  1 1
+  END
+  END 
+  
+  Symbol
+  Name 'cvide'
+  Type ELLIPSE
+  Filled FALSE
+  Points
+  1 1
+  END
+  END 
+  Symbol
+  Type ELLIPSE
+  Filled TRUE
+  Points
+  1 1
+  END
+  END 
+SYMBOL
+  NAME "pointille"
+  TYPE ELLIPSE
+  POINTS
+    1 1
+  END
+  STYLE
+    6 3 6 3
+  END
+END
+SYMBOL
+	NAME "pointille3"
+	TYPE VECTOR
+	POINTS
+	0 0
+	0 1
+	1 1
+	1 0
+       0 0
+	END
+	FILLED TRUE
+	STYLE
+	6 10 6 10
+	END
+END
+
+  SYMBOL
+    NAME 'rectangle-train'
+    TYPE VECTOR
+    POINTS
+      0 0
+      0 0.6
+      1 0.6
+      1 0
+      0 0
+    END
+    FILLED TRUE
+    STYLE
+      8 12 8 12
+    END
+  END
+  SYMBOL
+    NAME 'point'
+    TYPE ELLIPSE
+    POINTS
+      1 1
+    END
+    FILLED TRUE
+  END
+  #################################################################################################
+ #####BD Topo
+SYMBOL
+     NAME "chateau1"
+     TYPE TRUETYPE
+     FONT "reseau"
+     CHARACTER "&#107;"
+     ANTIALIAS TRUE
+ END 
+ SYMBOL
+     NAME "chateau2"
+     TYPE TRUETYPE
+     FONT "reseau"
+     CHARACTER "&#108;"
+     ANTIALIAS TRUE
+ END 
+  SYMBOL
+     NAME "eglise"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#238;"
+     ANTIALIAS TRUE
+ END 
+ SYMBOL
+     NAME "industrie"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#240;"
+     ANTIALIAS TRUE
+ END 
+ SYMBOL
+     NAME "chateau"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#242;"
+     ANTIALIAS TRUE
+ END 
+  SYMBOL
+     NAME "tracteur"
+     TYPE TRUETYPE
+     FONT "transport2"
+     CHARACTER "&#101;"
+     ANTIALIAS TRUE
+ END 
+   SYMBOL
+     NAME "poteau"
+     TYPE TRUETYPE
+     FONT "edf"
+     CHARACTER "&#032;"
+     ANTIALIAS TRUE
+ END 
+    SYMBOL
+     NAME "antenne"
+     TYPE TRUETYPE
+     FONT "telecom"
+     CHARACTER "&#089;"
+     ANTIALIAS TRUE
+ END 
+     SYMBOL
+     NAME "transformateur"
+     TYPE TRUETYPE
+     FONT "telecom"
+     CHARACTER "&#090;"
+     ANTIALIAS TRUE
+ END 
+     SYMBOL
+     NAME "colonne"
+     TYPE TRUETYPE
+     FONT "telecom"
+     CHARACTER "&#035;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "caddie"
+     TYPE TRUETYPE
+     FONT "crime"
+     CHARACTER "&#053;"
+     ANTIALIAS TRUE
+ END 
+  SYMBOL
+     NAME "prison"
+     TYPE TRUETYPE
+     FONT "crime"
+     CHARACTER "&#058;"
+     ANTIALIAS TRUE
+ END 
+  SYMBOL
+     NAME "silo"
+     TYPE TRUETYPE
+     FONT "transport"
+     CHARACTER "&#033;"
+     ANTIALIAS TRUE
+ END 
+   SYMBOL
+     NAME "serre"
+     TYPE TRUETYPE
+     FONT "transport"
+     CHARACTER "&#034;"
+     ANTIALIAS TRUE
+ END 
+    SYMBOL
+     NAME "aerodrome"
+     TYPE TRUETYPE
+     FONT "transport2"
+     CHARACTER "&#064;"
+     ANTIALIAS TRUE
+ END 
+ SYMBOL
+     NAME "chapelle"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#179;"
+     ANTIALIAS TRUE
+ END 
+  SYMBOL
+     NAME "religieux"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#194;"
+     ANTIALIAS TRUE
+ END 
+   SYMBOL
+     NAME "foot"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#192;"
+     ANTIALIAS TRUE
+ END 
+    SYMBOL
+     NAME "mairie"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#187;"
+     ANTIALIAS TRUE
+ END
+     SYMBOL
+     NAME "train"
+     TYPE TRUETYPE
+     FONT "transport2"
+     CHARACTER "&#106;"
+     ANTIALIAS TRUE
+ END
+      SYMBOL
+     NAME "gare"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#186;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "chateau"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#242;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "tour"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#175;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "tour"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#175;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "poste"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#171;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "poste_fond"
+     TYPE TRUETYPE
+     FONT "carto"
+     CHARACTER "&#172;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "pompier"
+     TYPE TRUETYPE
+     FONT "transport"
+     CHARACTER "&#109;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "police"
+     TYPE TRUETYPE
+     FONT "crime"
+     CHARACTER "&#095;"
+     ANTIALIAS TRUE
+ END
+  SYMBOL
+     NAME "hopital"
+     TYPE TRUETYPE
+     FONT "ville"
+     CHARACTER "&#067;"
+     ANTIALIAS TRUE
+ END
+   SYMBOL
+     NAME "parking"
+     TYPE TRUETYPE
+     FONT "ville"
+     CHARACTER "&#065;"
+     ANTIALIAS TRUE
+ END
+    SYMBOL
+     NAME "marche"
+     TYPE TRUETYPE
+     FONT "crime"
+     CHARACTER "&#059;"
+     ANTIALIAS TRUE
+ END
+ ###########################signalisation
+ SYMBOL
+     NAME "rond_pt"
+     TYPE TRUETYPE
+     FONT "signalisation"
+     CHARACTER "&#096;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "attention"
+     TYPE TRUETYPE
+     FONT "signalisation"
+     CHARACTER "&#072;"
+     ANTIALIAS TRUE
+ END
+  SYMBOL
+     NAME "repos"
+     TYPE TRUETYPE
+     FONT "signa2"
+     CHARACTER "&#033;"
+     ANTIALIAS TRUE
+ END
+   SYMBOL
+     NAME "aeroport"
+     TYPE TRUETYPE
+     FONT "signa2"
+     CHARACTER "&#034;"
+     ANTIALIAS TRUE
+ END
+    SYMBOL
+     NAME "port"
+     TYPE TRUETYPE
+     FONT "transport2"
+     CHARACTER "&#070;"
+     ANTIALIAS TRUE
+ END
+     SYMBOL
+     NAME "etoile"
+     TYPE TRUETYPE
+     FONT "transport"
+     CHARACTER "&#114;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "peage"
+     TYPE TRUETYPE
+     FONT "signa2"
+     CHARACTER "&#035;"
+     ANTIALIAS TRUE
+ END
+ SYMBOL
+     NAME "circulation_int"
+     TYPE TRUETYPE
+     FONT "signalisation"
+     CHARACTER "&#033;"
+     ANTIALIAS TRUE
+ END 
+ 
+ SYMBOL
+     NAME "ecole"
+     TYPE TRUETYPE
+     FONT "signalisation"
+     CHARACTER "&#114;"
+     ANTIALIAS TRUE
+     GAP -30
+ END 
+ SYMBOL
+     NAME "pt_localise"
+     TYPE TRUETYPE
+     FONT "signa2"
+     CHARACTER "&#037;"
+     ANTIALIAS TRUE
+ END
+ END
