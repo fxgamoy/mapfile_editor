@@ -76,7 +76,7 @@ $css=$oUserSession->val["css"];*/
 		};
 
 		var closeButtonOptions = {
-			//callback:self.pourvoir
+			callback:self.close()
 		};
 		StudioManager.create(contentOptions, closeButtonOptions);	
 		StudioManager.initInterface();
